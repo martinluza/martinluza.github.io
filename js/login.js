@@ -1,4 +1,4 @@
-let boton = document.getElementById('ingBtn');
+/*let boton = document.getElementById('ingBtn');
 
 boton.addEventListener('click', function(evento){
     
@@ -14,9 +14,7 @@ boton.addEventListener('click', function(evento){
     if (todoOk) {
         window.location.replace("index2.html");
     }
-    else {
-        alert(error);
-    }
+    
 
-})
 
+})*/
