@@ -6,6 +6,11 @@ let currentSortCriteria = undefined;
 let minPrice = undefined;
 let maxPrice = undefined;
 
+function setProductID(id){
+    localStorage.setItem("productID", id);
+    window.location = "product-info.html"
+}
+
 function sortProducts(criteria, array){
     let result = [];
     if (criteria === ORDER_DESC_BY_PRICE)
@@ -81,8 +86,6 @@ function sortAndShowProducts(sortCriteria, productsArray){
 
 document.addEventListener("DOMContentLoaded", function(e){
 
-    document.getElementById("profile").innerHTML += `<a class="nav-link" href="my-profile.html"> ${localStorage.getItem('usuario')} </a>`;
-
     getJSONData(PRODUCTS_URL).then(function(resultObj){
         if (resultObj.status === "ok"){
             currentProductsArray = resultObj.data
@@ -135,4 +138,5 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showProductsList();
     });
+
 });
