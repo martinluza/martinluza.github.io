@@ -51,11 +51,63 @@
     </div>
   </nav>
   <main>
+    <form action="#" class="needs-validation" novalidate id="formulario">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div class="row mt-4">
+        <div class="col">
+          <h1 class="mb-3">Perfil</h1>
+          <hr class="my-4">
+          <div class="row g-3">
+            
+              <div class="col-sm-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">
+                  Completa este campo.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="nombre2" class="form-label">Segundo nombre</label>
+                <input type="text" class="form-control" id="nombre2">
+              </div>
+
+              <div class="col-sm-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" required>
+                <div class="invalid-feedback">
+                  Completa este campo.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="apellido2" class="form-label">Segundo apellido</label>
+                <input type="text" class="form-control" id="apellido2">
+              </div>
+
+              <div class="col-sm-6">
+                <label for="mail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="mail" required>
+                <div class="invalid-feedback">
+                  Ingresa un mail válido.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="tel" class="form-label">Teléfono de contacto</label>
+                <input type="text" class="form-control" id="tel">
+              </div>
+
+              <hr class="my-4">
+
+              <button class="btn btn-primary" type="submit" id="save">Guardar cambios</button>
+
+            
+          </div>
+        </div>
       </div>
     </div>
+    </form>
   </main>
   <footer class="text-muted">
     <div class="container">

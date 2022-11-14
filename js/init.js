@@ -61,6 +61,11 @@ let getJSONData = function(url){
 
   boton.addEventListener('click', function(evento){
     localStorage.removeItem('usuario');
+    localStorage.removeItem('nombre');
+    localStorage.removeItem('nombre2');
+    localStorage.removeItem('apellido');
+    localStorage.removeItem('apellido2');
+    localStorage.removeItem('tel');
   })
 
 });

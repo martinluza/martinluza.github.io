@@ -120,32 +120,16 @@ function validaciones() {
 
 }
 
-(function () {
-    'use strict'
+let form = document.querySelector('#formulario');
 
-    var forms = document.querySelectorAll('.needs-validation')
+form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+});
 
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                    validaciones();
-                    form.classList.add('was-validated');
-                }else{
-                  form.submit();
-                  validaciones();
-                  form.reset();
-                  setTimeout(alerta.setAttribute('class', 'alert alert-success alert-dismissible fade show'), 5000);
-                  alerta.innerHTML = `<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    Has comprado con éxito!`;
-                }
-                
-            }, false)
-        })
-})();
 
 document.addEventListener("DOMContentLoaded", function(e){
     
